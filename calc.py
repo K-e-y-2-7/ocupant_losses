@@ -47,6 +47,8 @@ for key in new_losses.keys():
 
 
 def calculator_of_rus_losses(new_losses: dict) -> None:
+    '''Ця функція порівнює втрати ворога за минулу добу та позаминулу, і виводить різницю втрат, якщо вони були.
+    '''
     with open(file_loss, 'r') as old_loss:
         old_losses = {line.split(': ')[0].strip() : int(line.split(': ')[1][:-2]) for line in old_loss}
         print(beginning)
